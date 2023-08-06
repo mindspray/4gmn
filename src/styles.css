@@ -1,0 +1,33 @@
+:root {
+  --grey-color: #F0F0F0;
+  --dark-color: #1F1F1F;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  color: var(--dark-color);
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.container {
+  display: flex;
+  height: 100%
+}
+
+.side {
+  background-color: var(--grey-color);
+  padding: 20px;
+  min-width: 200px;
+}
+.projects-title {
+  padding: 10px 0;
+}
+ul {
+  list-style: none;
+}
+li {
+  padding: 10px 5px;
+}

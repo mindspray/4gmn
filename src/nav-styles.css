@@ -1,0 +1,32 @@
+:root{
+  --primary-color: #1E90FF;
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  color: var(--white);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.left-controls {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+.center-controls {
+  /* position: relative;
+  left: -40px;
+  align-self: center */
+}
+.right-controls {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}

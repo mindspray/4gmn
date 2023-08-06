@@ -1,0 +1,33 @@
+{
+  "name": "4gmn",
+  "version": "1.0.0",
+  "description": "A simple to-do app to help you not forget :)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindspray/4gmn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindspray/4gmn/issues"
+  },
+  "homepage": "https://github.com/mindspray/4gmn#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "csv-loader": "^3.0.5",
+    "html-webpack-plugin": "^5.5.3",
+    "json5": "^2.2.3",
+    "style-loader": "^3.3.3",
+    "toml": "^3.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "xml-loader": "^1.2.1",
+    "yamljs": "^0.3.0"
+  }
+}
