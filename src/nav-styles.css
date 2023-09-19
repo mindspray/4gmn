@@ -1,5 +1,5 @@
 :root{
-  --primary-color: #1E90FF;
+  --primary-color: #3f9fff;
   --white: #fff;
 }
 * {
@@ -27,6 +27,7 @@ nav {
 }
 .right-controls {
   display: flex;
+  gap: 5px;
   flex: 1;
   justify-content: flex-end;
 }

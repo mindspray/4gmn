@@ -17,20 +17,25 @@ const blueprint = {
   nav_navBar: {
       div_leftControls: {
         div_menu: {
-          text: 'Menu'
+          div_faSolid_faBars: {}
         },
         div_home: {
-          text: 'House'
+          div_faSolid_faHouse: {}
         },
         div_search: {
-          text: 'Search'
+          div_faSolid_faMagnifyingGlass: {}
         },
       },
       div_centerControls: {
         text: '🌸 4gmn'
       },
       div_rightControls: {
-        text: 'profile'
+        div_newTask: {
+          text: '[ + ]'
+        },
+        div_profile: {
+          div_faSolid_faUser: {}
+        },
       },
       // ul_navigation: {
       //   li_item: {

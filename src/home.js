@@ -18,16 +18,28 @@ const blueprint = {
   div_side: {
     ul_taskMenu: {
       li_taskInbox: {
-        text: 'Inbox'
+        div_faSolid_faInbox: {},
+        p_inboxText: {
+          text: 'Inbox'
+        }
       },
       li_taskToday: {
-        text: 'Today'
+        div_faSolid_faCalendarDay: {},
+        p_todayText: {
+          text: 'Today'
+        }
       },
       li_taskUpcoming: {
-        text: 'Upcoming'
+        div_faSolid_faCalendarDays: {},
+        p_upcomingText: {
+          text: 'Upcoming'
+        }
       },
       li_taskFilters: {
-        text: 'Filters & Labels'
+        div_faSolid_faFilter: {},
+        p_filterText: {
+          text: 'Filters & Labels'
+        }
       },
     },
     ul_projects: {
@@ -44,28 +56,22 @@ const blueprint = {
   },
   div_main: {
     div_hero: {
-      children: {
-        div_heroLeft: {
-          children: {
-            h1_title: {
-              text: text.title
-            },
-            p_tagline: {
-              text: text.tagline
-            },
-            p_intro: {
-              text: text.intro
-            }
-          }
+      div_heroLeft: {
+        h1_title: {
+          text: text.title
         },
-        div_heroRight: {
-          children: {
-            img_heroImg: {
-              src: './images/hero-splash.png'
-            }
-          }
+        p_tagline: {
+          text: text.tagline
+        },
+        p_intro: {
+          text: text.intro
         }
-      }
+      },
+      div_heroRight: {
+        img_heroImg: {
+          src: './images/hero-splash.png'
+        } 
+      } 
     }
   },
 }

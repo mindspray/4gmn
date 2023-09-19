@@ -27,23 +27,34 @@ function buildFullElement({tag, classes, id} = {}){
   if (typeof tag !== 'string') return;
   if(typeof tag === 'string'){
     let el = document.createElement(tag.toLowerCase());
-    
+
+    const hasCapital = str =>{
+      let upper = str.toUpperCase();
+      let lower = str.toLowerCase();
+      return (str === upper || (!(str === upper) && !(str === lower)));
+    }
     function camelToDashCase(str){
       let splits = str.split(/([A-Z])/);
       let assembledClasses = "";
       for(let i = 0; i < splits.length; i++){
         assembledClasses = assembledClasses.concat(splits[i].toLowerCase());
-        
-        if(i != splits.length-1 && (i % 3 === 0)){
-          assembledClasses = assembledClasses.concat('-');
+
+        if (i < splits.length-1){
+          if(hasCapital(splits[i+1])){
+            assembledClasses = assembledClasses.concat('-');
+          }
         }
+        
+        // if(i != splits.length-1 && (i % 2 === 0)){
+        //   assembledClasses = assembledClasses.concat('-');
+        // }
       }
       return assembledClasses;
     }
     
     function preppedClassNameAdder(className){
       function prepClassString(str){
-        const hasCapital = str => (str !== str.toUpperCase() || str!== str.toLowerCase());
+        
         if(hasCapital(str)){
           return camelToDashCase(str);
         } else {
@@ -181,13 +192,10 @@ function createElementFromBlueprint(blueprint, {containerType = "div", className
       if (splitKeys.length > 2){
         // from the 2nd to the 2nd to last key, set as classNames
         for(let i = 1; i < splitKeys.length; i++){
-          if(i != splitKeys.length-1){
+          if(i != splitKeys.length){
             classNames.push(splitKeys[i]);
           }
         }
-
-        // set last to idName
-        idName = splitKeys[splitKeys.length-1];
       } else {
         // otherwise if 2 or less strings from split, set 2nd on as classNames
         for(let i = 1; i < splitKeys.length; i++){

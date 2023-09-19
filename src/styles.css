@@ -30,4 +30,6 @@ ul {
 }
 li {
   padding: 10px 5px;
+  display: flex;
+  gap: 10px;~
 }
